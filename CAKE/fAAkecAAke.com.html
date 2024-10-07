@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fAAkecAAke.com</title>
+    <style>
+        /* CSS to style the image and center everything */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .image {
+            width: 300px;
+            cursor: pointer;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .audio-control {
+            margin-top: 20px;
+            display: none; /* Initially hidden until the image is clicked */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="videoframe_2104.png" alt="Click to Play Audio" class="image" onclick="playAudio()">
+        <audio id="audio" class="audio-control" controls>
+            <source src="videoplayback.m4a" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('audio');
+            audio.style.display = 'block'; // Make the audio control visible
+            audio.play(); // Play the audio
+        }
+    </script>
+
+</body>
+</html>
